@@ -1,7 +1,42 @@
 ﻿@page "/"
+@using Client.Components
 
-<PageTitle>Home</PageTitle>
+<MudGrid Style="min-height: 90vh;">
+    <MudItem xs="12" >
+        <MudCard Elevation="1">
+            <MudCardContent >
+                <MudText Typo="Typo.h3" Align="Align.Center">Florida Tech Carpool & Park</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12">
+        <MudCard Elevation="1">
+            <MudCardContent>
+                <MudText Typo="Typo.h5">Team Members</MudText>
+                <MudList>
+                    <MudListItem>Austin Phillips - aphillips2022@my.fit.edu </MudListItem>
+                    <MudListItem>Hunter Smith - hold@my.fit.edu</MudListItem>
+                    <MudListItem>Jason Smith - hold@my.fit.edu</MudListItem>
+                    <MudListItem>Jacqueline Torres - hold@my.fit.edu</MudListItem>
+                </MudList>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12">
+        <MudCard Elevation="1">
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+            <MudCardContent>
+                <MudText Typo="Typo.h5">Faculty Advisor</MudText>
+                <MudList>
+                    <MudListItem>Phillip Chan - pkc@cs.fit.edu </MudListItem>
+                </MudList>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12">
+        <FirstSemester/>
+    </MudItem>
+    <MudItem xs="12">
+        <SecondSemester />
+    </MudItem>
+</MudGrid>
