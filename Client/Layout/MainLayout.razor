@@ -11,14 +11,16 @@
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
         <MudDrawerHeader>
-            <MudText Typo="Typo.h6">FIT Carpool App</MudText>
+            <MudTooltip Text="Close" Arrow="true" Placement="Placement.Right">
+                <MudText Typo="Typo.h6" @onclick="@DrawerToggle" style="cursor: pointer;">FIT Carpool App</MudText>
+            </MudTooltip>
         </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
     <MudMainContent MaxWidth="MaxWidth.Small">
-        <MudPaper Class="my-external-paper ">
-            <MudContainer Fixed="true" Class="my-gutter">
-                <MudPaper Height="100%" Width="100%" Class="my-colored-paper">
+        <MudPaper Class="side-paper">
+            <MudContainer Fixed="true" Class="gutter">
+                <MudPaper Height="100%" Width="100%" Class="center-paper">
                     <MudContainer MaxWidth="MaxWidth.Small">
                         @Body
                     </MudContainer>
@@ -38,16 +40,14 @@
 }
 
 <style>
-    /* Custom CSS for colored paper */
-    .my-colored-paper {
+    .center-paper {
         background-color: white;
     }
 
-    .my-external-paper {
+    .side-paper {
         background-color: whitesmoke;
     }
-    /* Custom CSS for gutter */
-    .my-gutter {
+    .gutter {
         padding-left: 5%;
         padding-right: 5%;
     }
