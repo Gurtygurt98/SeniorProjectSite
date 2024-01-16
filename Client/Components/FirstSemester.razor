@@ -1,16 +1,27 @@
 ﻿<MudCard Elevation="1">
+    <MudCardHeader>
+        <MudText Typo="Typo.h5" @onclick="@ToggleContent" style="cursor: pointer;">First Semester</MudText>
+    </MudCardHeader>
     <MudCardContent>
-        <MudText Typo="Typo.h5" @onclick="@ToggleContent">First Semester</MudText>
         @if (isContentOpen)
         {
-            
+            <MudGrid>
+                <MudItem xs = "12">
+                    <MudStack Row="true">
+                        <MudText>Plan (Jan 22)</MudText>
+                        <DocumentButton DocPath="Documents\TestWord.PDF"></DocumentButton>
+                    </MudStack>
+                </MudItem>
+                <MudItem xs="6">
+                </MudItem>
+            </MudGrid>
         }
     </MudCardContent>
 </MudCard>
 @code {
     Boolean isContentOpen = false;
-    public void ToggleContent()
+    public void ToggleContent()     
     {
-        
+        isContentOpen = !isContentOpen;   
     }
 }
