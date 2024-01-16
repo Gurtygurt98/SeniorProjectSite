@@ -1,15 +1,63 @@
 ﻿@page "/Documents"
-<PageTitle>Document List</PageTitle>
-<MudText>Page under development. Will have an in browser view to see all related documents </MudText>
+<MudText Typo="Typo.h1">Documents</MudText>
+<MudText Typo="Typo.body1">Dont look at this monstrosity </MudText>
+<MudStack Row="true">
+    <MudIcon Icon="@Icons.Material.Filled.Construction" Size="Size.Large" />
+    <MudIcon Icon="@Icons.Material.Filled.Construction" Size="Size.Large" />
+    <MudIcon Icon="@Icons.Material.Filled.Construction" Size="Size.Large" />
+    <MudIcon Icon="@Icons.Material.Filled.Construction" Size="Size.Large" />
+</MudStack>
+
+
 <MudGrid Style="min-height: 100vh;">
-    <MudItem xs="12" >
+    <MudText Typo="Typo.h2">First Semester</MudText>
+    <MudItem xs = "12">
         <MudCard Elevation="1">
-            <MudCardContent >
-                <MudText Typo="Typo.h6" >Page under development. Will have an in browser view to see all related documents</MudText>
+            <MudCardHeader>Plan</MudCardHeader>
+            <MudCardContent>
+                <iframe style="width:100%;height:750px;" src="Documents\TestWord.PDF"></iframe>
             </MudCardContent>
         </MudCard>
     </MudItem>
+    <MudItem xs="12">
+        <MudCard Elevation="1">
+            <MudCardHeader>Milestone 1</MudCardHeader>
+            <MudCardContent>
+                <iframe style="width:100%;height:750px;" src="Documents\TestWord.PDF"></iframe>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12">
+        <MudCard Elevation="1">
+            <MudCardHeader>Milestone 1</MudCardHeader>
+            <MudCardContent>
+                <iframe style="width:100%;height:750px;" src="Documents\TestWord.PDF"></iframe>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudCard Elevation="1">
+        <MudCardHeader>Milestone 1</MudCardHeader>
+        <MudCardContent>
+            <iframe style="width:100%;height:500px;" src="Documents\TestWord.PDF"></iframe>
+        </MudCardContent>
+    </MudCard>
+    <MudCard Elevation="1">
+        <MudCardHeader>Milestone 2</MudCardHeader>
+        <MudCardContent>
+            <iframe style="width:100%;height:500px;" src="Documents\TestWord.PDF"></iframe>
+        </MudCardContent>
+    </MudCard>
+    <MudCard Elevation="1">
+        <MudCardHeader>Milestone 3</MudCardHeader>
+        <MudCardContent>
+            <iframe style="width:100%;height:500px;" src="Documents\TestWord.PDF"></iframe>
+        </MudCardContent>
+    </MudCard>
+
+
+    <MudText Typo="Typo.h2">Second Semester</MudText>
 </MudGrid>
+
 @code {
 
 }

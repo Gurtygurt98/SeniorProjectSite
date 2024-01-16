@@ -1,0 +1,20 @@
+﻿<MudStack Row="true">
+    <MudText>Plan (Jan 22)</MudText>
+    @foreach(string document in DocPaths)
+    {
+        <MudLink Href="@document" Target="Blank">@StripPath(document)</MudLink>
+    }
+</MudStack>
+@code {
+    [Parameter]
+    public string[] DocPaths { get; set; } = { "No document"};
+    [Parameter]
+    public string Label { get; set; } = "Unnamed Doc";
+    // Cleans
+    public static string StripPath(string FullPath)
+    {
+        FullPath = FullPath.ToLower();
+        string output = FullPath.Replace("documents\\", "");
+        return output.Replace(".pdf", "");
+    }
+}

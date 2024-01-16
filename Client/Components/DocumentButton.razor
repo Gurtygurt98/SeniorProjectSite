@@ -1,9 +1,0 @@
-﻿<MudLink Href="@DocPath" Target="Blank">@StripPath(DocPath)</MudLink>
-@code {
-    [Parameter]
-    public string DocPath{ get; set; }
-    public static string StripPath(string FullPath)
-    {
-        return FullPath.Replace("Documents\\","");
-    }
-}

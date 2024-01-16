@@ -8,18 +8,17 @@
             <MudGrid>
                 <MudItem xs = "12">
                     <MudStack Row="true">
-                        <MudText>Plan (Jan 22)</MudText>
-                        <DocumentButton DocPath="Documents\TestWord.PDF"></DocumentButton>
+                        <DocumentLink Label="Plan Jan 22" DocPaths=@Jan22Docs></DocumentLink>
                     </MudStack>
                 </MudItem>
-                <MudItem xs="6">
-                </MudItem>
+
             </MudGrid>
         }
     </MudCardContent>
 </MudCard>
 @code {
-    Boolean isContentOpen = false;
+    Boolean isContentOpen = true;
+    public string[] Jan22Docs = { "Documents\\plan.pdf" };
     public void ToggleContent()     
     {
         isContentOpen = !isContentOpen;   
