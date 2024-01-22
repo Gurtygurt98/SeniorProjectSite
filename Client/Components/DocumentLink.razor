@@ -13,8 +13,7 @@
     // Cleans
     public static string StripPath(string FullPath)
     {
-        FullPath = FullPath.ToLower();
-        string output = FullPath.Replace("documents\\", "");
+        string output = FullPath.Replace("Documents\\", "");
         return output.Replace(".pdf", "");
     }
 }
