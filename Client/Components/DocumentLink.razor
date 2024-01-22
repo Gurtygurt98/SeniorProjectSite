@@ -2,7 +2,7 @@
     <MudText>Plan (Jan 22)</MudText>
     @foreach(string document in DocPaths)
     {
-        <MudLink Href="@document" Target="Blank">@StripPath(document)</MudLink>
+        <MudLink Href="@document" Target="_blank">@StripPath(document)</MudLink>
     }
 </MudStack>
 @code {
