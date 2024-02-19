@@ -8,10 +8,30 @@
             <MudGrid>
                 <MudItem xs = "12">
                     <MudStack Row="true">
-                        <DocumentLink Label="Plan Jan 22" DocPaths=@Jan22Docs></DocumentLink>
+                        <DocumentLink Label="Plan (Jan 22)" DocPaths=@Jan22Docs></DocumentLink>
                     </MudStack>
                 </MudItem>
+                <MudDivider></MudDivider>
 
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 1 (Feb 19)" DocPaths=@Feb19Docs></DocumentLink>
+                    </MudStack>
+                </MudItem>
+                <MudDivider></MudDivider>
+
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 2 (Mar 18)" DocPaths=@Mar18Docs></DocumentLink>
+                    </MudStack>
+                </MudItem>
+                <MudDivider></MudDivider>
+
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 3 (Apr 15)" DocPaths=@Apr15Docs></DocumentLink>
+                    </MudStack>
+                </MudItem>
             </MudGrid>
         }
     </MudCardContent>
@@ -19,6 +39,11 @@
 @code {
     Boolean isContentOpen = true;
     public string[] Jan22Docs = { "Documents\\Plan.pdf", "Documents\\Presentation.pdf"};
+    public string[] Feb19Docs = { "Documents\\Requirements.pdf", "Documents\\Design.pdf",
+    "Documents\\Test.pdf", "Documents\\Presentation M1.pdf", "Documents\\Evaluation M1.pdf"};
+    public string[] Mar18Docs = { "Documents\\Presentation M2.pdf", "Documents\\Evaluation M2.pdf"};
+    public string[] Apr15Docs = { "Documents\\Presentation M3.pdf", "Documents\\Evaluation M3.pdf" };
+
     public void ToggleContent()     
     {
         isContentOpen = !isContentOpen;   

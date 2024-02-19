@@ -1,10 +1,16 @@
-﻿<MudStack Row="true">
-    <MudText>Plan (Jan 22)</MudText>
+﻿<MudGrid>
+    <MudItem xs="4">
+        <MudText>@Label</MudText>
+
+    </MudItem>
+
     @foreach(string document in DocPaths)
     {
-        <MudLink Href="@document" Target="_blank">@StripPath(document)</MudLink>
+        <MudItem xs="4">
+            <MudLink Href="@document" Target="_blank">@StripPath(document)</MudLink>
+        </MudItem>
     }
-</MudStack>
+</MudGrid>
 @code {
     [Parameter]
     public string[] DocPaths { get; set; } = { "No document"};

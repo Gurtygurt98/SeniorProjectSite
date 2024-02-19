@@ -1,8 +1,51 @@
 ﻿<MudCard Elevation="1">
+    <MudCardHeader>
+        <MudText Typo="Typo.h5" @onclick="@ToggleContent" style="cursor: pointer;">Second Semester</MudText>
+    </MudCardHeader>
     <MudCardContent>
-        <MudText Typo="Typo.h5">Second Semester</MudText>
+        @if (isContentOpen)
+        {
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Plan (Jan 22)" DocPaths=@Plan></DocumentLink>
+                    </MudStack>
+                </MudItem>
+                <MudDivider></MudDivider>
+
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 4 ()" DocPaths=@M4></DocumentLink>
+                    </MudStack>
+                </MudItem>
+                <MudDivider></MudDivider>
+
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 5 ()" DocPaths=@M5></DocumentLink>
+                    </MudStack>
+                </MudItem>
+                <MudDivider></MudDivider>
+                <MudItem xs="12">
+                    <MudStack Row="true">
+                        <DocumentLink Label="Milestone 6 ()" DocPaths=@M6></DocumentLink>
+                    </MudStack>
+                </MudItem>
+            </MudGrid>
+        }
     </MudCardContent>
 </MudCard>
 @code {
+    Boolean isContentOpen = true;
+    public string[] Plan = { "Documents\\Plan Semester 2.pdf", "Documents\\Presentation Semester 2.pdf" };
+    public string[] M4 = { "Documents\\Presentation M4.pdf", "Documents\\Evaluation M4.pdf" };
+    public string[] M5 = { "Documents\\Poster.pdf", "Documents\\E-Book Page.pdf",
+    "Documents\\Presentation M5.pdf", "Documents\\Evaluation M5.pdf" };
+    public string[] M6 = { "Documents\\User Manual.pdf", "Documents\\Demo Video.pdf",
+    "Documents\\Presentation M6.pdf", "Documents\\Evaluation M6.pdf", };
 
+    public void ToggleContent()
+    {
+        isContentOpen = !isContentOpen;
+    }
 }
