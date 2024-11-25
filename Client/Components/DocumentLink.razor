@@ -6,9 +6,19 @@
 
     @foreach(string document in DocPaths)
     {
-        <MudItem xs="4">
-            <MudLink Href="@document" Target="_blank">@StripPath(document)</MudLink>
-        </MudItem>
+        if (document.Contains(".pdf"))
+        {
+            <MudItem xs="4">
+                <MudLink Href="@document" Target="_blank">@StripPath(document)</MudLink>
+            </MudItem>
+        }
+        else if (document.Contains("Demo Video"))
+        {
+            <MudItem xs="4">
+                <MudLink Href="https://www.youtube.com/watch?v=8TQSe2CKa1Q" Target="_blank">Demo Video</MudLink>
+            </MudItem>
+        }
+
     }
 </MudGrid>
 @code {
